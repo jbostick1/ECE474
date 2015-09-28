@@ -8,23 +8,24 @@ private:
     std::vector<int> inputsizes;
     std::vector<int> outputsizes
     bool canSign;
-    float timeDelay;
+    std::vector<float> timeDelay;
 
 public:
     datapathComp::datpathComp();
-    virtual void datapathComp::setName(std::string aString);
-    virtual void datapathComp::addInputSize(int aVal);
-    virtual void datapathComp::addOutputSize(int aVal);
-    virtual void datapathComp::setTokenID(std::string aString);
-    virtual void datapathComp::setUsage(std::string aString);
-    virtual void datapathComp::setCanSign(bool tf);
-    virtual void datapathComp::setTimeDelay(float aDelay);
+    void datapathComp::setName(std::string aString);
+    void datapathComp::addInputSize(int aVal);
+    void datapathComp::addOutputSize(int aVal);
+    void datapathComp::setTokenID(std::string aString);
+    void datapathComp::setUsage(std::string aString);
+    void datapathComp::setCanSign(bool tf);
+    void datapathComp::addTimeDelay(float aDelay);
     std::string datapathComp::getName();
     std::string datapathComp::getTokenID();
     std::string datapathComp::getUsage();
     bool datapathComp::getCanSign();
-    std::vector<int>  datapathComp::getISize();
-    float datapathComp::getTimeDelay();
+    std::vector<int> datapathComp::getInputSize();
+    std::vector<int> datapathComp::getOutputSize(); 
+    std::vector<float> datapathComp::getTimeDelay();
 
 
 };
